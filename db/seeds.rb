@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Sample.delete_all
+Call.delete_all
+10.times do |i|
+  Sample.create!(:sample_description => "Description for sample ##{i}",
+                  :description => "Meta-description for sample ##{i}",
+                  :keywords => "Some, keywrods, for, sample, ##{i}")
+end
+5.times do |i|
+  Call.create!(:phone_number => "+7916000000#{i}")
+end
