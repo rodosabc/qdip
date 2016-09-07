@@ -6,25 +6,15 @@
     <div class="intro-text">
       <div class="intro-lead-in">Welcome To Our Studio!</div>
       <div class="intro-heading">It's Nice To Meet You</div>
-      <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
+      <a href="#info" class="page-scroll btn btn-xl">УЗНАТЬ БОЛЬШЕ</a>
     </div>
   </div>
 </header>
 
 <!-- Services Section -->
-<%=render "services"%>
+<%=render "info"%>
 
-<div id="examples">
-  <h2>Примеры наших работ</h2>
-  <ul>
-    <%@samples.each do |sample|%>
-        <li>
-          <%=sample.sample_description%>
-          <%=image_tag(sample.photo)%>
-        </li>
-    <%end%>
-  </ul>
-</div>
+<%=render "portfolio"%>
 
 <div id="prices">
   <h2>Цены на разные типы машин</h2>
@@ -55,11 +45,13 @@
 <div id="contacts">
   <h2>Контакты</h2>
   <p>8 (977) 533 75 56</p>
-</div>
-
-<div id="adress">
   <h2>Адрес</h2>
   <p>Текст или yandex maps</p>
 </div>
+
+<!--<div id="adress">
+  <h2>Адрес</h2>
+  <p>Текст или yandex maps</p>
+</div>-->
 
 
