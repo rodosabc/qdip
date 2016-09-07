@@ -1,30 +1,5 @@
-<nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header page-scroll">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span> Меню <i class="fa fa-bars"></i>
-      </button>
-      <a class="navbar-brand page-scroll" href="#page-top">Qdip</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="hidden">
-          <a href="#page-top"></a>
-        </li>
-        <li><a href="#info" class="page_scroll">Инфо</a></li>
-        <li><a href="#prices" class="page_scroll">Цены</a></li>
-        <li><a href="#examples" class="page_scroll">Примеры работ</a></li>
-        <li><a href="#contacts" class="page_scroll">Контакты</a></li>
-        <li><a href="#adress" class="page_scroll">Адрес</a></li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container-fluid -->
-</nav>
+<!-- Navbar-->
+<%=render "navbar"%>
 
 <header>
   <div class="container">
@@ -36,14 +11,18 @@
   </div>
 </header>
 
-<div id="info">
-  <h2>Покраска автомобиля и его частей жидкой резиной Plastidip</h2>
+<!-- Services Section -->
+<%=render "services"%>
+
+<div id="examples">
+  <h2>Примеры наших работ</h2>
   <ul>
-    <li>Полная покраска автомобиля от 15 000 Рублей</li>
-    <li>Разбор всех деталей перед покраской</li>
-    <li>Более 56 цветов и возможность их смешивания</li>
-    <li>Время покраски от 1 дня</li>
-    <li>Для того чтобы узнать свою цену впишите мобильный в форму ниже</li>
+    <%@samples.each do |sample|%>
+        <li>
+          <%=sample.sample_description%>
+          <%=image_tag(sample.photo)%>
+        </li>
+    <%end%>
   </ul>
 </div>
 
@@ -70,15 +49,6 @@
     <li>Машина типа 3</li>
     <li>Машина типа 4</li>
     <li>Машина типа 5</li>
-  </ul>
-</div>
-
-<div id="examples">
-  <h2>Примеры наших работ</h2>
-  <ul>
-    <%@samples.each do |sample|%>
-      <li><%=sample.sample_description%></li>
-    <%end%>
   </ul>
 </div>
 
