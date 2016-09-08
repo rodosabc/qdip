@@ -8,9 +8,10 @@
       </div>
     </div>
     <div class="row">
+      <%i = 0%>
       <%@samples.each do |sample|%>
       <div class="col-md-4 col-sm-6 portfolio-item">
-        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+        <a href="#portfolioModal<%=i%>" class="portfolio-link" data-toggle="modal">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
               FUCK YOU
@@ -23,6 +24,7 @@
           <p class="text-muted">Graphic Design</p>
         </div>
       </div>
+          <%i = i + 1%>
       <%end%>
     </div>
   </div>
