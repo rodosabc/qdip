@@ -302,20 +302,17 @@ section h3.section-subheading {
   margin: 15px 0;
   text-transform: none;
 }
-#portfolio .portfolio-item,
-#prices .portfolio-item{
+#portfolio .portfolio-item{
   margin: 0 0 15px;
   right: 0;
 }
-#portfolio .portfolio-item .portfolio-link ,
-#prices .portfolio-item .portfolio-link {
+#portfolio .portfolio-item .portfolio-link {
   display: block;
   position: relative;
   max-width: 400px;
   margin: 0 auto;
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover ,
-#prices .portfolio-item .portfolio-link .portfolio-hover {
+#portfolio .portfolio-item .portfolio-link .portfolio-hover{
   background: rgba(254, 209, 54, 0.9);
   position: absolute;
   width: 100%;
@@ -325,12 +322,10 @@ section h3.section-subheading {
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover ,
-#prices .portfolio-item .portfolio-link .portfolio-hover:hover {
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover{
   opacity: 1;
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content ,
-#prices .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content{
   position: absolute;
   width: 100%;
   height: 20px;
@@ -340,46 +335,106 @@ section h3.section-subheading {
   margin-top: -12px;
   color: white;
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i ,
-#prices .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
   margin-top: -12px;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#prices .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4,
-#prices .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4{
   margin: 0;
 }
-#portfolio .portfolio-item .portfolio-caption ,
-#prices .portfolio-item .portfolio-caption {
+#portfolio .portfolio-item .portfolio-caption{
   max-width: 400px;
   margin: 0 auto;
   background-color: white;
   text-align: center;
   padding: 25px;
 }
-#portfolio .portfolio-item .portfolio-caption h4 ,
-#prices .portfolio-item .portfolio-caption h4 {
+#portfolio .portfolio-item .portfolio-caption h4 {
   text-transform: none;
   margin: 0;
 }
-#portfolio .portfolio-item .portfolio-caption p ,
-#prices .portfolio-item .portfolio-caption p {
+#portfolio .portfolio-item .portfolio-caption p{
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 16px;
   margin: 0;
 }
-#portfolio * ,
+#portfolio * {
+  z-index: 2;
+}
+@media (min-width: 767px) {
+  #portfolio .portfolio-item {
+    margin: 0 0 30px;
+  }
+}
+
+/**/
+#prices .price-item{
+  margin: 0 0 15px;
+  right: 0;
+}
+#prices .price-item .price-link {
+  display: block;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#prices .price-item .price-link .price-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+#prices .price-item .price-link .price-hover:hover {
+  opacity: 1;
+}
+#prices .price-item .price-link .price-hover .price-hover-content {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  top: 50%;
+  margin-top: -12px;
+  color: white;
+}
+#prices .price-item .price-link .price-hover .price-hover-content i {
+  margin-top: -12px;
+}
+#prices .price-item .price-link .price-hover .price-hover-content h3,
+#prices .price-item .price-link .price-hover .price-hover-content h4 {
+  margin: 0;
+}
+#prices .price-item .price-caption {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  text-align: center;
+  padding: 25px;
+}
+#prices .price-item .price-caption h4 {
+  text-transform: none;
+  margin: 0;
+}
+#prices .price-item .price-caption p {
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  margin: 0;
+}
 #prices * {
   z-index: 2;
 }
 @media (min-width: 767px) {
-  #portfolio .portfolio-item ,
-  #prices .portfolio-item {
+  #prices .price-item {
     margin: 0 0 30px;
   }
 }
+
+
 .timeline {
   list-style: none;
   padding: 0;
@@ -762,3 +817,21 @@ body {
      height:auto;
      display:block;
  }
+
+ a.price-blur:hover {
+   img{
+     z-index: 2;
+     -webkit-filter: blur(2px);
+     filter: blur(2px);
+     -webkit-transition: all ease 0.5s;
+     -moz-transition: all ease 0.5s;
+     transition: all ease 0.5s;
+   }
+ }
+ .price-hover-content {
+   z-index: 3;
+   -webkit-filter: blur(0px);
+   filter: blur(0px);
+ }
+
+

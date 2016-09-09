@@ -14,14 +14,13 @@
         <a href="#portfolioModal<%=i%>" class="portfolio-link" data-toggle="modal">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
-              FUCK YOU
+              <i class="fa fa-hand-pointer-o fa-3x"></i>
             </div>
           </div>
           <%=image_tag(sample.photo.url, :class => 'img-responsive')%>
         </a>
         <div class="portfolio-caption">
-          <h4>Round Icons</h4>
-          <p class="text-muted">Graphic Design</p>
+          <h4><%=sample.model_title%></h4>
         </div>
       </div>
           <%i = i + 1%>

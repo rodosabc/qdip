@@ -17,6 +17,11 @@ ru:
         few: 'Примеры работы'
         many: 'Примеры работы'
         other: 'Примеры работы'
+      price_item:
+        one: 'Цена'
+        few: 'Цены'
+        many: 'Цены'
+        other: 'Цены'
     attributes:
       call:
          phone_number: 'Номер телефона'
@@ -24,6 +29,13 @@ ru:
          updated_at: 'Обновлено'
       sample:
         sample_description: 'Описание'
+        photo: 'Изображение'
+        created_at: 'Создано'
+        updated_at: 'Обновлено'
+      price_item:
+        title: 'Название'
+        price: 'Цена'
+        photo: 'Изображение'
         created_at: 'Создано'
         updated_at: 'Обновлено'
     errors:

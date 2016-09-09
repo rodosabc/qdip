@@ -8,12 +8,21 @@
 
 Sample.delete_all
 Call.delete_all
-10.times do |i|
+PriceItem.delete_all
+9.times do |i|
   Sample.create!(:sample_description => "Description for sample ##{i}",
                   :description => "Meta-description for sample ##{i}",
                   :keywords => "Some, keywrods, for, sample, ##{i}",
-                  :photo => File.new("#{Rails.root}/app/assets/images/eric.png"))
+                  :photo => File.new("#{Rails.root}/app/assets/images/eric.png"),
+                  :model_title => "Tesla Model #{i}")
 end
+
+10.times do |i|
+  PriceItem.create!(:title => "Price for car ##{i}",
+                 :photo => File.new("#{Rails.root}/app/assets/images/eric.png"),
+                 :price => "От #{i}0 000 рублей")
+end
+
 5.times do |i|
   Call.create!(:phone_number => "+7916000000#{i}")
 end

@@ -7,18 +7,18 @@
       </div>
     </div>
     <div class="row">
-      <%@samples.each do |sample|%>
-      <div class="col-md-4 col-sm-6 portfolio-item">
-        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              FUCK YOU
+      <%@price_items.each do |item|%>
+      <div class="col-md-4 col-sm-6 price-item">
+        <a class="price-link price-blur">
+          <div class="price-hover">
+            <div class="price-hover-content">
+              <%=item.price%>
             </div>
           </div>
-          <%=image_tag(sample.photo, :class => 'img-responsive')%>
+          <%=image_tag(item.photo, :class => 'img-responsive')%>
         </a>
-        <div class="portfolio-caption">
-          <h4>Round Icons</h4>
+        <div class="price-caption">
+          <h4><%=item.title%></h4>
         </div>
       </div>
       <%end%>
