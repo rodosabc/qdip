@@ -17,4 +17,10 @@ $(document).ready(function(){
         $('.navbar-toggle:visible').click();
     });
 
+    $('.modal').on('hidden.bs.modal', function (e) {
+        if($('.modal').hasClass('in')) {
+            $('body').addClass('modal-open');
+        }
+    });
+
 });

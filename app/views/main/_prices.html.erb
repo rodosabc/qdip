@@ -2,8 +2,8 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading">Наши цены</h2>
-        <h3 class="section-subheading text-muted">Цены на различные типы машин.</h3>
+        <h2 class="section-heading">Автомобили</h2>
+        <h3 class="section-subheading text-muted">Цены на покраску автомобилей резиной.</h3>
       </div>
     </div>
     <div class="row">
@@ -21,6 +21,29 @@
           <h4><%=item.title%></h4>
         </div>
       </div>
+      <%end%>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Диски</h2>
+        <h3 class="section-subheading text-muted">Цены на покраску дисков резиной.</h3>
+      </div>
+    </div>
+    <div class="row">
+      <%@wheels.each do |wheel|%>
+          <div class="col-md-4 col-sm-6 price-item">
+            <a href="#contact_us" class="price-link price-blur page-scroll">
+              <div class="price-hover">
+                <div class="price-hover-content">
+                  <%=wheel.price%>
+                </div>
+              </div>
+              <%=image_tag(wheel.photo, :class => 'img-responsive')%>
+            </a>
+            <div class="price-caption">
+              <h4><%=wheel.title%></h4>
+            </div>
+          </div>
       <%end%>
     </div>
   </div>

@@ -9,6 +9,7 @@
 Sample.delete_all
 Call.delete_all
 PriceItem.delete_all
+Wheel.delete_all
 9.times do |i|
   Sample.create!(:sample_description => "Description for sample ##{i}",
                   :description => "Meta-description for sample ##{i}",
@@ -17,12 +18,18 @@ PriceItem.delete_all
                   :model_title => "Tesla Model #{i}")
 end
 
-10.times do |i|
+9.times do |i|
   PriceItem.create!(:title => "Price for car ##{i}",
                  :photo => File.new("#{Rails.root}/app/assets/images/eric.png"),
                  :price => "От #{i}0 000 рублей")
 end
 
+9.times do |i|
+  Wheel.create!(:title => "Price for wheel ##{i}",
+                    :photo => File.new("#{Rails.root}/app/assets/images/eric.png"),
+                    :price => "От #{i} 000 рублей")
+end
+
 5.times do |i|
-  Call.create!(:phone_number => "+7916000000#{i}")
+  Call.create!(:phone_number => "+7916000000#{i}", :name => "Name ##{i}")
 end

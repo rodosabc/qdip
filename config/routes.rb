@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :calls, only: [:create]
+
   devise_for :users, :skip => [:sessions]
   as :user do
     get 'login' => 'devise/sessions#new', :as => :new_user_session
