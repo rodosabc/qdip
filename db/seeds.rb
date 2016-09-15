@@ -10,6 +10,8 @@ Sample.delete_all
 Call.delete_all
 PriceItem.delete_all
 Wheel.delete_all
+
+
 9.times do |i|
   Sample.create!(:sample_description => "Description for sample ##{i}",
                   :description => "Meta-description for sample ##{i}",
@@ -31,5 +33,5 @@ end
 end
 
 5.times do |i|
-  Call.create!(:phone_number => "+7916000000#{i}", :name => "Name ##{i}")
+  Call.create!(:phone_number => "+7916000000#{i}", :first_name => "Name ##{i}")
 end
