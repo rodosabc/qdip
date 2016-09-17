@@ -12,13 +12,7 @@
         <%=form_for @call, :html =>{ :id =>"contactForm", :name => "sentMessage", :remote => true} do |f| %>
         <div class="row">
           <div class="col-md-6">
-            <div class="form-group">
-              <%=f.text_field :first_name, class: 'form-control', placeholder: 'Ваше имя *', id: 'first_name', required: true, data_validation_required_message: "Пожалуйста, введите Ваше имя."%>
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
+            <div class="form-group phone-number">
               <%=f.phone_field :phone_number, class: 'form-control', placeholder: 'Ваш номер телефона *', id: 'phone_number', required: true, data_validation_required_message: "Пожалуйста, введите Ваш номер телефона."%>
               <p class="help-block text-danger"></p>
             </div>

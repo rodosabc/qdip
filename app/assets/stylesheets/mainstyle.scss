@@ -806,26 +806,31 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
- .map-container img{
-     max-width:100% !important;
-     height:auto;
-     display:block;
- }
+.map-container img{
+  max-width:100% !important;
+  height:auto;
+  display:block;
+}
+a.price-blur:hover {
+  img{
+    z-index: 2;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+}
+.price-hover-content {
+  z-index: 3;
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+}
+div.phone-number{
+  text-align: center;
+  margin: auto;
+}
 
- a.price-blur:hover {
-   img{
-     z-index: 2;
-     -webkit-filter: blur(2px);
-     filter: blur(2px);
-     -webkit-transition: all ease 0.5s;
-     -moz-transition: all ease 0.5s;
-     transition: all ease 0.5s;
-   }
- }
- .price-hover-content {
-   z-index: 3;
-   -webkit-filter: blur(0px);
-   filter: blur(0px);
- }
+
 
 

@@ -33,5 +33,5 @@ end
 end
 
 5.times do |i|
-  Call.create!(:phone_number => "+7916000000#{i}", :first_name => "Name ##{i}")
+  Call.create!(:phone_number => "+7916000000#{i}")
 end
