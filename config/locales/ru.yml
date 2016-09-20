@@ -22,6 +22,11 @@ ru:
         few: 'Цены'
         many: 'Цены'
         other: 'Цены'
+      wheel:
+        one: 'Диск'
+        few: 'Диски'
+        many: 'Диски'
+        other: 'Диски'
     attributes:
       call:
          phone_number: 'Номер телефона'
@@ -33,6 +38,12 @@ ru:
         created_at: 'Создано'
         updated_at: 'Обновлено'
       price_item:
+        title: 'Название'
+        price: 'Цена'
+        photo: 'Изображение'
+        created_at: 'Создано'
+        updated_at: 'Обновлено'
+      wheel:
         title: 'Название'
         price: 'Цена'
         photo: 'Изображение'

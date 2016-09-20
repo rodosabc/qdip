@@ -17,6 +17,13 @@ $(document).ready(function(){
         $('.navbar-toggle:visible').click();
     });
 
+    // Offset for Main Navigation
+    $('#mainNav').affix({
+        offset: {
+            top: 100
+        }
+    })
+
     $('.modal').on('hidden.bs.modal', function (e) {
         if($('.modal').hasClass('in')) {
             $('body').addClass('modal-open');

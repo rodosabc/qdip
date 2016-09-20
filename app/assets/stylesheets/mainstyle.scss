@@ -397,9 +397,9 @@ section h3.section-subheading {
   height: 20px;
   font-size: 20px;
   text-align: center;
-  top: 50%;
+  top: 100%;
   margin-top: -12px;
-  color: #fed136;
+  color: #000000;
 }
 #prices .price-item .price-link .price-hover .price-hover-content i {
   margin-top: -12px;
@@ -843,6 +843,20 @@ div.phone-number{
 .logo-ref{
   position: relative;
 }
+
+.special{
+  font-size: 16px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 75px;
+  text-align: center;
+  color: #ff0905;
+  padding-top: 10px;
+}
+
+
 
 
 
