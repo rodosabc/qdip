@@ -235,7 +235,7 @@ header {
   background-size: cover;
   -o-background-size: cover;
   text-align: center;
-  color: white;
+  color: #aaa;
 }
 header .intro-text {
   padding-top: 100px;
@@ -282,8 +282,8 @@ section {
 }
 section h2.section-heading {
   font-size: 40px;
-  margin-top: 0;
-  margin-bottom: 15px;
+  margin-top: -20px;
+  margin-bottom: 30px;
 }
 section h3.section-subheading {
   font-size: 16px;
@@ -379,14 +379,26 @@ section h3.section-subheading {
   max-width: 400px;
   margin: 0 auto;
 }
+a.price-blur:hover {
+  .blur-image{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+  }
+}
 #prices .price-item .price-link .price-hover {
   position: absolute;
   width: 100%;
   height: 100%;
   opacity: 0;
+  transition: all ease 0.5s;
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
-  transition: all ease 0.5s;
 }
 #prices .price-item .price-link .price-hover:hover {
   opacity: 1;
@@ -397,7 +409,7 @@ section h3.section-subheading {
   height: 20px;
   font-size: 20px;
   text-align: center;
-  top: 100%;
+  top: 104%;
   margin-top: -12px;
   color: #000000;
 }
@@ -811,21 +823,7 @@ body {
   height:auto;
   display:block;
 }
-a.price-blur:hover {
-  img{
-    z-index: 2;
-    -webkit-filter: blur(2px);
-    filter: blur(2px);
-    -webkit-transition: all ease 0.5s;
-    -moz-transition: all ease 0.5s;
-    transition: all ease 0.5s;
-  }
-}
-.price-hover-content {
-  z-index: 3;
-  -webkit-filter: blur(0px);
-  filter: blur(0px);
-}
+
 div.phone-number{
   width: 400px;
   margin: 0 auto;
@@ -848,15 +846,11 @@ div.phone-number{
   font-size: 16px;
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: none;
-  font-style: italic;
-  font-weight: 400;
+  font-weight: 800;
   margin-bottom: 75px;
   text-align: center;
-  color: #ff0905;
   padding-top: 10px;
 }
-
-
 
 
 

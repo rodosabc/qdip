@@ -12,10 +12,10 @@
         <a class="price-link price-blur page-scroll">
           <div class="price-hover">
             <div class="price-hover-content">
-              <%=item.price%>
+              <i><%=item.price%></i>
             </div>
           </div>
-          <%=image_tag(item.photo, :class => 'img-responsive')%>
+          <%=image_tag(item.photo, :class => 'img-responsive blur-image')%>
         </a>
         <div class="price-caption">
           <h4><%=item.title%></h4>
@@ -35,7 +35,7 @@
             <a class="price-link price-blur page-scroll">
               <div class="price-hover">
                 <div class="price-hover-content">
-                  <%=wheel.price%>
+                  <i><%=wheel.price%></i>
                 </div>
               </div>
               <%=image_tag(wheel.photo, :class => 'img-responsive')%>
@@ -48,7 +48,9 @@
     </div>
     <div class="row">
       <div class="special col-md-12">
+        <hr>
         ПРИ ПОКРАСКЕ СРАЗУ АВТОМОБИЛЯ И ДИСКОВ СКИДКА 30%
+        <hr>
       </div>
     </div>
   </div>
