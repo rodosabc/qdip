@@ -1,0 +1,48 @@
+<!-- Portfolio Items Modal  -->
+<%@categories.each do |category|%>
+<div class="portfolio-modal modal fade" id="portfolioItemsModal<%=category.id%>" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="modal-body">
+              <section id="portfolio">
+                <div class="row">
+                  <h2><%=category.name%></h2>
+                </div>
+                <div class="row">
+                  <%i = 0%>
+                  <%@samples.each do |sample|%>
+                      <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal<%=sample.id%>" class="portfolio-link" data-toggle="modal">
+                          <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                              <i class="fa fa-hand-pointer-o fa-3x"></i>
+                            </div>
+                          </div>
+                          <%=image_tag(sample.photo.url, :class => 'img-responsive')%>
+                        </a>
+                        <div class="portfolio-caption">
+                          <h4><%=sample.model_title%></h4>
+                        </div>
+                      </div>
+                      <%i = i + 1%>
+                  <%end%>
+                </div>
+              </section>
+              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%end%>

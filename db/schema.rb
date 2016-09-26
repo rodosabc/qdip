@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160917153401) do
+ActiveRecord::Schema.define(version: 20160926103644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,17 @@ ActiveRecord::Schema.define(version: 20160917153401) do
     t.string   "phone_number"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "price_items", force: :cascade do |t|
@@ -43,6 +54,8 @@ ActiveRecord::Schema.define(version: 20160917153401) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.string   "model_title"
+    t.integer  "category_id"
+    t.index ["category_id"], name: "index_samples_on_category_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -73,4 +86,5 @@ ActiveRecord::Schema.define(version: 20160917153401) do
     t.datetime "photo_updated_at"
   end
 
+  add_foreign_key "samples", "categories"
 end
