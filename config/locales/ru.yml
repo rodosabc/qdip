@@ -17,6 +17,11 @@ ru:
         few: 'Примеры работы'
         many: 'Примеры работы'
         other: 'Примеры работы'
+      category:
+        one: 'Категория'
+        few: 'Категории'
+        many: 'Категории'
+        other: 'Категории'
       price_item:
         one: 'Цена'
         few: 'Цены'
@@ -46,6 +51,12 @@ ru:
       wheel:
         title: 'Название'
         price: 'Цена'
+        photo: 'Изображение'
+        created_at: 'Создано'
+        updated_at: 'Обновлено'
+      category:
+        name: 'Название'
+        description: 'Описание'
         photo: 'Изображение'
         created_at: 'Создано'
         updated_at: 'Обновлено'
